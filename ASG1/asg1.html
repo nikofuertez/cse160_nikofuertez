@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+</head>
+
+<body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p id="numdot"> XXX</p>
+    <!-- CLEAR CANVAS -->
+    <br><br><button id="clearC">Clear Canvas</button><br><br>
+    <!-- DRAWING MODE BUTTONS -->
+    <p>Drawing Mode:</p>
+    <button id="Point">Point</button>
+    <button id="Triangle">Triangle</button>
+    <button id="Circle">Circle</button><br><br>
+    <p>Shape Color</p>
+    Red <input type="range" min="0" max="100" value="0" class="slider" id="redSlide">
+    <!-- - -->
+    Green<input type="range" min="0" max="100" value="0" class="slider" id="greenSlide">
+    <!-- - -->
+    Blue<input type="range" min="0" max="100" value="0" class="slider" id="blueSlide"> <br><br>
+    <!-- - -->
+    Shape Size: <input type="range" min="5" max="40" value="0" class="slider" id="shapeSizeSlide">
+    <!-- - -->
+    Circles Segment Count: <input type="range" min="10" max="100" value="0" class="slider" id="circleSegmentSlide">
+    <p>Awesomeness:</p>
+    Alpha/Transparency: <input type="range" min="5" max="100" value="0" class="slider" id="alphaSlider"><br>
+    <!-- - -->
+    <p>Painting/Drawing</p>
+    <button id="drawButton">Ditto Drawing</button>
+    <p>Reference Image:</p>
+    <img src="imgs/ditto_paint.jpeg" alt="ditto in sun" width="500" height="300">
+
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="../class/Point.js"></script>
+    <script src="asg1.js"></script>
+
+</body>
+
+</html>
