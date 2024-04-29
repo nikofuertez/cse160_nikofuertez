@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Niko Fuertez ASG2</title>
+</head>
+
+<body onload="main()">
+    <canvas id="webgl" width="500" height="500">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <!-- DRAWING MODE BUTTONS -->
+    <!-- <p>Drawing Mode:</p>
+    <button id="Point">Point</button>
+    <button id="Triangle">Triangle</button>
+    <button id="Circle">Circle</button><br><br>
+    <p>Shape Color</p>
+    Red <input type="range" min="0" max="100" value="0" class="slider" id="redSlide">
+
+    Green<input type="range" min="0" max="100" value="0" class="slider" id="greenSlide">
+
+    Blue<input type="range" min="0" max="100" value="0" class="slider" id="blueSlide"> <br><br> -->
+
+    <!-- - -->
+    <div id="fps"></div>
+    <p>
+        Animate Me! Let's walk
+        <button id="animateButtonOn">On</button>
+        <button id="animateButtonOff">Off</button>
+    </p>
+    <p>
+        Joint 1 - Legs:
+        <input type="range" min="-50" max="50" value="0" class="slider" id="jointOne">
+    </p>
+    <p>
+        Joint 2 - Base Tail:
+        <input type="range" min="-25" max="100" value="0" class="slider" id="jointTwo">
+    </p>
+    <p>
+        Joint 3 - End Tail:
+        <input type="range" min="-25" max="25" value="0" class="slider" id="jointThree">
+    </p>
+
+    <p>
+        Camera Angle X:
+        <input type="range" min="0" max="360" value="0" class="slider" id="angleSlideX">
+    </p>
+    <p>
+        Camera Angle Y:
+        <input type="range" min="0" max="360" value="0" class="slider" id="angleSlide">
+    </p>
+    <p>
+        Camera Angle Z:
+        <input type="range" min="0" max="360" value="0" class="slider" id="angleSlideZ">
+    </p>
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Point.js"></script>
+    <script src="Cube.js"></script>
+    <script src="asg2.js"></script>
+
+</body>
+
+</html>
