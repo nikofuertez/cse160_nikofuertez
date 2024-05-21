@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from './path/to/three.module.js'; // Corrected path
 import WebGL from 'three/addons/capabilities/WebGL.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
