@@ -24,11 +24,6 @@ const materialSphere = new THREE.MeshStandardMaterial({ map: textureWater });
 const sphere = new THREE.Mesh(geoSphere, materialSphere);
 scene.add(sphere);
 
-const ringGeo = new THREE.TorusGeometry(.5, 0.1, 20, 1000);
-const materialRing = new THREE.MeshStandardMaterial({ color: 'gold' });
-const ring = new THREE.Mesh(ringGeo, materialRing);
-scene.add(ring);
-
 // positions
 camera.position.z = 6;
 camera.position.y = 1;
@@ -36,8 +31,6 @@ camera.position.y = 1;
 sphere.position.x = -3;
 sphere.position.y = -1;
 
-ring.position.x = -3;
-ring.position.y = 2;
 function animate() {
     requestAnimationFrame(animate);
     cube.rotation.x += 0.01;
@@ -45,8 +38,6 @@ function animate() {
 
     sphere.rotation.z += 0.01;
 
-    ring.rotation.x += 0.01;
-    ring.rotation.z += 0.01;
     renderer.render(scene, camera);
 }
 
