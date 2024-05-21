@@ -1,13 +1,12 @@
 import * as THREE from 'three';
 import WebGL from 'three/addons/capabilities/WebGL.js';
-import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { TextureLoader } from 'three';
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color('grey');
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const objLoader = new OBJLoader();
 const renderer = new THREE.WebGLRenderer();
 const textLoad = new THREE.TextureLoader();
 const textureWater = textLoad.load('lib/water.avif');
@@ -39,50 +38,8 @@ sphere.position.y = -1;
 
 ring.position.x = -3;
 ring.position.y = 2;
-
-const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load('lib/Red_Color.jpg');
-
-// Sussy Imposter by J-Toastie [CC-BY] (https://creativecommons.org/licenses/by/3.0/) via Poly Pizza (https://poly.pizza/m/HjvIFmodJV)
-objLoader.load(
-    'lib/SussyImposter/SussyImposter.obj',
-    function(object) {
-        // position and sizing
-        object.scale.set(.05, 0.05, 0.05);
-        object.position.x = 3;
-
-        // jpg material
-        const material = new THREE.MeshStandardMaterial({ map: texture });
-        object.traverse(function(child) {
-            if (child instanceof THREE.Mesh) {
-                child.material = material;
-            }
-        });
-        crewmate = object;
-        scene.add(object);
-    },
-    function(xhr) {
-
-        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-
-    },
-    function(error) {
-
-        console.log('.obj file error');
-
-    }
-);
-let crewmate;
-
 function animate() {
     requestAnimationFrame(animate);
-
-    if (crewmate) {
-        crewmate.rotation.x += -0.01;
-        crewmate.rotation.y += 0.01;
-        crewmate.rotation.y += 0.01;
-    }
-
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
 
